@@ -11,9 +11,19 @@ export class LoginComponent {
   constructor(private spotifyService:SpotifyService){}
 
   ngOnInit(): void {
-      
+      // this.spotifyService.getUrlCallbackToken();
+      this.verifyUrlCallbackToken();
   }
-  //making a method for when you click the button. Doesnt really do much at the moment
+
+  verifyUrlCallbackToken(){
+    const token = this.spotifyService.getUrlCallbackToken();
+    console.log(token);
+    if(!!token){
+      this.spotifyService.defineAccessToken(token);
+    }
+    
+  }
+  //this when clicked will take you to the page where you can accept spotify permissions for your account.
   openLoginPage(){
    window.location.href =   this.spotifyService.getLoginUrl();
   }
