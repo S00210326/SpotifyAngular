@@ -43,9 +43,12 @@ export class SpotifyService {
     this.spotifyApi.setAccessToken(token);
     localStorage.setItem('token',token);
     //testing the skip to next method but mot working
-    // this.spotifyApi.skipToNext();
+    console.log(token);
+    this.spotifyApi.skipToNext();
+    
     
   }
+  
 
   
 }

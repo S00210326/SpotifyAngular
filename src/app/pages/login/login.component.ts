@@ -13,6 +13,7 @@ export class LoginComponent {
   ngOnInit(): void {
       // this.spotifyService.getUrlCallbackToken();
       this.verifyUrlCallbackToken();
+      
   }
 
   verifyUrlCallbackToken(){
@@ -27,5 +28,5 @@ export class LoginComponent {
   openLoginPage(){
    window.location.href =   this.spotifyService.getLoginUrl();
   }
-
-}
+  // https://accounts.spotify.com/en/authorize?client_id=c4cd5531ce004764a2ef3a24bcb776b4&redirect_uri=http://localhost:4200/login/&scopes=user-read-currently-playing%20user-read-recently-played%20user-read-playback-state%20user-top-read%20user-modify-playback-state%20user-library-read%20playlist-read-private%20playlist-read-collaborative&response_type=token&show_dialog=true
+ }
